@@ -9,7 +9,7 @@ WORKDIR /etc/nginx
 COPY . .
 
 RUN mv nginx.repo /etc/yum.repos.d/nginx.repo
-RUN yum install nginx -t
+RUN yum -t install nginx 
 RUN rm -rf /etc/nginx/conf.d/default.conf
 RUN rm -rf /usr/share/nginx/html/index.html
 RUN mv default.conf /etc/nginx/conf.d/default.conf
