@@ -3,10 +3,9 @@ FROM 172.30.65.13:5000/python:2.7.16-centos7.6
 ARG NGINX_SERVER_PORT
 
 ENV PROJECT_NAME=nginx-test \
-    NGINX_SERVER_PORT=$NGINX_SERVER_PORT \
-    NGINX_CONF_DIR=/etc/nginx \
-
-WORKDIR $NGINX_CONF_DIR
+    NGINX_SERVER_PORT=$NGINX_SERVER_PORT 
+   
+WORKDIR /etc/nginx
 COPY . .
 
 RUN mv nginx.repo /etc/yum.repos.d/nginx.repo
