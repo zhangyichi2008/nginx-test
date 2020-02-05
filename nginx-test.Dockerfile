@@ -15,4 +15,4 @@ RUN mv index.html /usr/share/nginx/html/index.html
 
 EXPOSE $NGINX_SERVER_PORT
 
-ENTRYPOINT nginx
+CMD ["nginx"]
